@@ -1,0 +1,25 @@
+.game-board {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+    border: 1px solid black;
+}
+
+.square {
+    border: 1px solid   
+ black;
+    text-align: center;
+    padding: 20px;
+}
+
+.snake, .ladder {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: transparent;
+}
+
+.snake img, .ladder img {
+    width: 100%;
+    height: 100%;
+}

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mind-Blowing Snake and Ladder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-board">
+        </div>
+    <div class="player-info">
+        <p>Player 1: <span id="player1-position">0</span></p>
+        <p>Player 2: <span id="player2-position">0</span></p>
+    </div>
+    <button id="roll-dice">Roll Dice</button>
+    <script src="script.js"></script>
+</body>
+</html>

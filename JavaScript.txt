@@ -1,0 +1,48 @@
+JavaScript
+const board = document.querySelector('.game-board');
+const player1Position = document.getElementById('player1-position');
+const player2Position = document.getElementById('player2-position');
+const rollDiceButton = document.getElementById('roll-dice');
+
+// Create board squares dynamically
+for (let i = 100; i >= 1; i--) {
+    const square = document.createElement('div');
+    square.classList.add('square');
+    square.textContent = i;
+    board.appendChild(square);
+
+    // Add snakes and ladders (adjust positions and sizes as needed)
+    if (i === 99) {
+        const snake = document.createElement('div');
+        snake.classList.add('snake');
+        snake.style.top = '0px';
+        snake.style.left = '0px';
+        snake.innerHTML = '<img src="snake.png">';
+        board.appendChild(snake);
+    }
+    // ... Add more snakes and ladders here ...
+}
+
+// Game logic
+let currentPlayer = 1;
+let player1Score = 0;
+let player2Score = 0;
+
+rollDiceButton.addEventListener('click', () => {
+    const diceRoll = Math.floor(Math.random() * 6) + 1;
+
+    if (currentPlayer === 1) {
+        player1Score += diceRoll;
+        player1Position.textContent = player1Score;
+        // Check for snakes and ladders
+        // ...
+    } else {
+        player2Score += diceRoll;
+        player2Position.textContent = player2Score;
+        // Check for snakes and ladders
+        // ...
+    }
+
+    // Switch players
+    currentPlayer = currentPlayer === 1 ? 2 : 1;
+});
